@@ -1,0 +1,93 @@
+/* ___________GENERAL___________ */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ___________HEADER___________ */
+
+header {
+  z-index: 2;
+}
+#brandName {
+  font-size: 75px;
+  font-family: "Abril Fatface", cursive;
+  color: #79b993;
+  text-decoration: none;
+}
+
+#colorblock {
+  color: #36494e;
+}
+
+/* ___________MAIN___________ */
+main {
+  background-color: #e3e3e3;
+  position: relative;
+  top: -40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.card {
+  border: 1px solid #e3e3e3;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-title {
+  font-size: 32px;
+}
+
+h5 {
+  display: inline;
+}
+
+.x {
+  height: 10px;
+}
+
+.removeSection {
+  border: none;
+  background-color: white;
+  float: right;
+}
+
+.lock {
+  height: 25px;
+  position: relative;
+  bottom: 5px;
+}
+
+.lockSection {
+  border: none;
+  background-color: white;
+}
+
+.plus {
+  height: 10px;
+}
+
+.add {
+  border: none;
+  background-color: white;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid #e3e3e3;
+  width: 100%;
+}
+
+/* ___________FOOTER___________ */
+footer {
+  text-align: center;
+}

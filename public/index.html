@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <title>SyliGen</title>
+  </head>
+  <body>
+    <header class="col-md-10 center">
+      <p id="brandName">Syli<span id="colorblock">Gen</span></p>
+    </header>
+    <main class="col-md-10 center">
+      <div class="card col-md-10">
+        <div class="card-body">
+          <button class="removeSection">
+            <img class="x" src="./imgs/xIcon.png" alt="x icon" />
+          </button>
+          <h5 class="card-title">Contact Information</h5>
+          <button class="lockSection">
+            <img class="lock" src="./imgs/unlockIcon.png" alt="lock icon" />
+          </button>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="email"> Email: </label>
+            <input type="text" />
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="phone"> Phone Number: </label>
+            <input type="text" />
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="officehrs">
+              Office Hours:
+            </label>
+            <input type="text" />
+          </div>
+          <div id="addContact"></div>
+          <button class="add">
+            <img src="./imgs/plusIcon.png" alt="Plus icon" class="plus" /> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="card col-md-10">
+        <div class="card-body">
+          <button class="removeSection">
+            <img class="x" src="./imgs/xIcon.png" alt="x icon" />
+          </button>
+          <h5 class="card-title">Title IX</h5>
+          <button class="lockSection">
+            <img class="lock" src="./imgs/unlockIcon.png" alt="lock icon" />
+          </button>
+          <textarea name="grading" id="grading" rows="7">
+            Title IX is a federal law that provides that no person be excluded on the basis of sex from participation in, be denied benefits of, or be subjected to discrimination under any education program or activity.  Both Title IX and university policy make clear that sexual violence and harassment based on sex is prohibited.  An individual who believes they have been subjected to sexual violence or harassed on the basis of sex can seek support, including counseling and academic support, from the university.  If you or someone you know has been harassed on the basis of sex or sexually assaulted, you can find information and resources at Links to an external site.https://sexualviolenceprevention.asu.edu/faqsLinks to an external site.. 
+
+            As a mandated reporter, I am obligated to report any information I become aware of regarding alleged acts of sexual discrimination, including sexual violence and dating violence.  ASU Counseling Services, Links to an external site.https://eoss.asu.edu/counselingLinks to an external site., is available if you wish to discuss any concerns confidentially and privately.
+          </textarea>
+        </div>
+      </div>
+
+      <div class="card col-md-10">
+        <div class="card-body">
+          <button class="removeSection">
+            <img class="x" src="./imgs/xIcon.png" alt="x icon" />
+          </button>
+          <h5 class="card-title">Grading</h5>
+          <button class="lockSection">
+            <img class="lock" src="./imgs/unlockIcon.png" alt="lock icon" />
+          </button>
+          <table style="width: 100%">
+            <tr>
+              <th>Letter</th>
+              <th>Percentage</th>
+            </tr>
+            <tr>
+              <td><input type="text" value="A+" /></td>
+              <td><input type="text" value="97-100%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="A" /></td>
+              <td><input type="text" value="94-96%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="A-" /></td>
+              <td><input type="text" value="90-93%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="B+" /></td>
+              <td><input type="text" value="87-89%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="B" /></td>
+              <td><input type="text" value="84-86%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="B-" /></td>
+              <td><input type="text" value="80-83%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="C+" /></td>
+              <td><input type="text" value="77-79%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="C" /></td>
+              <td><input type="text" value="73-76%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="C-" /></td>
+              <td><input type="text" value="70-72%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="D+" /></td>
+              <td><input type="text" value="67-69%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="D" /></td>
+              <td><input type="text" value="65-66%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="D-" /></td>
+              <td><input type="text" value="64-60%" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" value="F" /></td>
+              <td><input type="text" value="<59%" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="card col-md-10">
+        <div class="card-body">
+          <button class="removeSection">
+            <img class="x" src="./imgs/xIcon.png" alt="x icon" />
+          </button>
+          <h5 class="card-title">Course Schedule</h5>
+          <button class="lockSection">
+            <img class="lock" src="./imgs/unlockIcon.png" alt="lock icon" />
+          </button>
+          <p class="card-text">Email: Phone</p>
+        </div>
+      </div>
+
+      <div class="card col-md-10">
+        <div class="card-body">
+          <button class="removeSection">
+            <img class="x" src="./imgs/xIcon.png" alt="x icon" />
+          </button>
+          <h5 class="card-title">Attendance</h5>
+          <button class="lockSection">
+            <img class="lock" src="./imgs/unlockIcon.png" alt="lock icon" />
+          </button>
+          <p class="card-text">Email: Phone</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <a href="login.html">Admin login</a>
+      </nav>
+      <small>SyliGen © All Rights Reserved</small>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
