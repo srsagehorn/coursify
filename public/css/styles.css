@@ -4,6 +4,10 @@
   margin-right: auto;
 }
 
+.col-md-10 {
+  width: 80%;
+}
+
 /* ___________HEADER___________ */
 
 header {
@@ -12,7 +16,7 @@ header {
 #brandName {
   font-size: 75px;
   font-family: "Abril Fatface", cursive;
-  color: #79b993;
+  color: #6db58a;
   text-decoration: none;
 }
 
@@ -33,9 +37,10 @@ main {
 
 .card {
   border: 1px solid #e3e3e3;
-  margin: 10px;
+  margin: 20px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.75);
 }
 
 .card-title {
@@ -46,14 +51,24 @@ h5 {
   display: inline;
 }
 
-.x {
-  height: 10px;
+.sideBtns {
+  float: right;
 }
 
-.removeSection {
+.x,
+.c {
+  height: 12px;
+}
+
+.removeSection,
+.collapse {
   border: none;
   background-color: white;
-  float: right;
+  /* float: right; */
+}
+
+.collapse:not(.show) {
+  display: inline;
 }
 
 .lock {
@@ -78,13 +93,31 @@ h5 {
 
 input {
   border: none;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #d2d1d1;
 }
 
 textarea {
   border: none;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #d2d1d1;
   width: 100%;
+}
+
+.addedContact {
+  display: inline;
+}
+#render {
+  text-align: right;
+}
+
+#renderBtn {
+  background-color: #79b993;
+  color: black;
+  box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  font-size: 22px;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 /* ___________FOOTER___________ */
