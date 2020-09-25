@@ -94,6 +94,7 @@ h5 {
 input {
   border: none;
   border-bottom: 1px solid #d2d1d1;
+  margin: 1px;
 }
 
 textarea {
@@ -105,6 +106,11 @@ textarea {
 .addedContact {
   display: inline;
 }
+
+.form-check-input:checked + .form-check-label {
+  font-weight: bold;
+}
+
 #render {
   text-align: right;
 }

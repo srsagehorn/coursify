@@ -167,11 +167,14 @@
                 value="textbook"
                 id="defaultCheck1"
               />
-              <p>Required Textbook:</p>
-              <label class="form-check-label" for="email"> Title </label>
+              <label class="form-check-label" for="textbook"
+                >Required Textbook</label
+              >
+              <br />
+              <label class="form-check-label" for="textbook"> Title </label>
               <input type="text" />
               <br />
-              <label class="form-check-label" for="email"> ISBN </label>
+              <label class="form-check-label" for="textbook"> ISBN </label>
               <input type="text" />
             </div>
             <div class="form-check">
@@ -181,7 +184,10 @@
                 value="software"
                 id="defaultCheck1"
               />
-              <p>Required Software:</p>
+              <label class="form-check-label" for="software"
+                >Required Software:</label
+              >
+              <br />
               <input type="text" />
               <br />
               <input type="text" />
@@ -200,10 +206,11 @@
               <input
                 class="form-check-input"
                 type="checkbox"
-                value="software"
+                value="other"
                 id="defaultCheck1"
               />
-              <p>Other:</p>
+              <label class="form-check-label" for="other">Other:</label>
+              <br />
               <input type="text" />
               <br />
               <input type="text" />
@@ -468,6 +475,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script src="js/index.js"></script>
+    <script src="./public/js/index.js"></script>
   </body>
 </html>

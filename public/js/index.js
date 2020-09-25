@@ -68,10 +68,10 @@ for (let i = 0; i < sections.length; i++) {
   // lock the selection
   $("#l" + sections[i]).on("click", function () {
     if (!locked[i]) {
-      $(".lock" + sections[i]).attr("src", "./imgs/lockIcon.png");
+      $(".lock" + sections[i]).attr("src", "./public/imgs/lockIcon.png");
       locked[i] = true;
     } else {
-      $(".lock" + sections[i]).attr("src", "./imgs/unlockIcon.png");
+      $(".lock" + sections[i]).attr("src", "./public/imgs/unlockIcon.png");
       locked[i] = false;
     }
   });
@@ -80,11 +80,11 @@ for (let i = 0; i < sections.length; i++) {
   $("#c" + sections[i]).on("click", function () {
     if (coll[i]) {
       $("#h" + sections[i]).show();
-      $(".c" + sections[i]).attr("src", "./imgs/collapseIcon.png");
+      $(".c" + sections[i]).attr("src", "./public/imgs/collapseIcon.png");
       coll[i] = false;
     } else {
       $("#h" + sections[i]).hide();
-      $(".c" + sections[i]).attr("src", "./imgs/uncollapseIcon.png");
+      $(".c" + sections[i]).attr("src", "./public/imgs/uncollapseIcon.png");
       coll[i] = true;
     }
   });
