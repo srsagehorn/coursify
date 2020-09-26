@@ -27,173 +27,106 @@
       <p id="brandName">Syli<span id="colorblock">Gen</span></p>
     </header>
     <main class="col-md-10 center">
-      <div class="col-md-10 center">
+      <div class="coll col-md-10 center">
         <button class="btn btn-light" id="collapseAll">
           Collapse all sections
         </button>
       </div>
-      <!-- need to add a modal that asks if they would like to start from a template or create their own and then select parts they want -->
-      <!-- INTRODUCTION -->
-      <div class="card col-md-10" id="introduction">
-        <div class="card-body">
-          <div class="sideBtns">
-            <button class="collapse" id="cintroduction">
+      <!-- need to add a modal that asks if they would like to start from a e or create their own and then select parts they want -->
+      <div class="dragster-region">
+        <!-- INTRODUCTION -->
+        <div class="dragster-block card col-md-10" id="introduction">
+          <div class="card-body">
+            <div class="sideBtns">
+              <button class="collapse" id="cintroduction">
+                <img
+                  class="c cintroduction"
+                  src="./public/imgs/collapseIcon.png"
+                  alt="collapse icon"
+                />
+              </button>
+              <button class="removeSection" id="xintroduction">
+                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+              </button>
+            </div>
+            <h5 class="card-title">Introduction</h5>
+            <button class="lockSection" id="lintroduction">
               <img
-                class="c cintroduction"
-                src="./public/imgs/collapseIcon.png"
-                alt="collapse icon"
+                class="lock lockintroduction"
+                src="./public/imgs/unlockIcon.png"
+                alt="lock icon"
               />
             </button>
-            <button class="removeSection" id="xintroduction">
-              <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
-            </button>
-          </div>
-          <h5 class="card-title">Introduction</h5>
-          <button class="lockSection" id="lintroduction">
-            <img
-              class="lock lockintroduction"
-              src="./public/imgs/unlockIcon.png"
-              alt="lock icon"
-            />
-          </button>
-          <div class="hide" id="hintroduction">
-            <textarea
-              name="introduction"
-              id="introduction"
-              rows="3"
-              placeholder="Type here..."
-            ></textarea>
+            <div class="hide" id="hintroduction">
+              <textarea
+                name="introduction"
+                id="introduction"
+                rows="3"
+                placeholder="Type here..."
+              ></textarea>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- CONTACT INFO -->
-      <div class="card col-md-10" id="contact">
-        <div class="card-body">
-          <div class="sideBtns">
-            <button class="collapse" id="ccontact">
+        <!-- CONTACT INFO -->
+        <div class="dragster-block card col-md-10" id="contact">
+          <div class="card-body">
+            <div class="sideBtns">
+              <button class="collapse" id="ccontact">
+                <img
+                  class="c ccontact"
+                  src="./public/imgs/collapseIcon.png"
+                  alt="collapse icon"
+                />
+              </button>
+              <button id="xcontact" class="removeSection">
+                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+              </button>
+            </div>
+            <h5 class="card-title">Contact Information</h5>
+            <button id="lcontact" class="lockSection">
               <img
-                class="c ccontact"
-                src="./public/imgs/collapseIcon.png"
-                alt="collapse icon"
+                class="lock lockcontact"
+                src="./public/imgs/unlockIcon.png"
+                alt="lock icon"
               />
             </button>
-            <button id="xcontact" class="removeSection">
-              <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
-            </button>
-          </div>
-          <h5 class="card-title">Contact Information</h5>
-          <button id="lcontact" class="lockSection">
-            <img
-              class="lock lockcontact"
-              src="./public/imgs/unlockIcon.png"
-              alt="lock icon"
-            />
-          </button>
-          <div class="hide" id="hcontact">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="email"
-                id="defaultCheck1"
-              />
-              <label class="form-check-label" for="email"> Email: </label>
-              <input type="text" />
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="phone"
-                id="defaultCheck1"
-              />
-              <label class="form-check-label" for="phone">
-                Phone Number:
-              </label>
-              <input type="text" />
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="officehrs"
-                id="defaultCheck1"
-              />
-              <label class="form-check-label" for="officehrs">
-                Office Hours:
-              </label>
-              <input type="text" />
-            </div>
-            <div id="addContact"></div>
-            <button class="add addContact">
-              <img
-                src="./public/imgs/plusIcon.png"
-                alt="Plus icon"
-                class="plus"
-              />
-              Add
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- TEXTBOOK -->
-      <div class="card col-md-10" id="textbook">
-        <div class="card-body">
-          <div class="sideBtns">
-            <button class="collapse" id="ctextbook">
-              <img
-                class="c ctextbook"
-                src="./public/imgs/collapseIcon.png"
-                alt="collapse icon"
-              />
-            </button>
-            <button id="xtextbook" class="removeSection">
-              <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
-            </button>
-          </div>
-          <h5 class="card-title">Textbook and Required Materials</h5>
-          <button id="ltextbook" class="lockSection">
-            <img
-              class="lock locktextbook"
-              src="./public/imgs/unlockIcon.png"
-              alt="lock icon"
-            />
-          </button>
-          <div class="hide" id="htextbook">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="textbook"
-                id="defaultCheck1"
-              />
-              <label class="form-check-label" for="textbook"
-                >Required Textbook</label
-              >
-              <br />
-              <label class="form-check-label" for="textbook"> Title </label>
-              <input type="text" />
-              <br />
-              <label class="form-check-label" for="textbook"> ISBN </label>
-              <input type="text" />
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="software"
-                id="defaultCheck1"
-              />
-              <label class="form-check-label" for="software"
-                >Required Software:</label
-              >
-              <br />
-              <input type="text" />
-              <br />
-              <input type="text" />
-              <br />
-              <div id="addSoftware"></div>
-              <button class="add addSoftware">
+            <div class="hide" id="hcontact">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="email"
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="email"> Email: </label>
+                <input type="text" />
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="phone"
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="phone">
+                  Phone Number:
+                </label>
+                <input type="text" />
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="officehrs"
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="officehrs">
+                  Office Hours:
+                </label>
+                <input type="text" />
+              </div>
+              <div id="addContact"></div>
+              <button class="add addContact">
                 <img
                   src="./public/imgs/plusIcon.png"
                   alt="Plus icon"
@@ -202,21 +135,95 @@
                 Add
               </button>
             </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="other"
-                id="defaultCheck1"
+          </div>
+        </div>
+        <!-- TEXTBOOK -->
+        <div class="dragster-block card col-md-10" id="textbook">
+          <div class="card-body">
+            <div class="sideBtns">
+              <button class="collapse" id="ctextbook">
+                <img
+                  class="c ctextbook"
+                  src="./public/imgs/collapseIcon.png"
+                  alt="collapse icon"
+                />
+              </button>
+              <button id="xtextbook" class="removeSection">
+                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+              </button>
+            </div>
+            <h5 class="card-title">Textbook and Required Materials</h5>
+            <button id="ltextbook" class="lockSection">
+              <img
+                class="lock locktextbook"
+                src="./public/imgs/unlockIcon.png"
+                alt="lock icon"
               />
-              <label class="form-check-label" for="other">Other:</label>
-              <br />
-              <input type="text" />
-              <br />
-              <input type="text" />
-              <br />
-              <div id="addOther"></div>
-              <button class="add addOther">
+            </button>
+            <div class="hide" id="htextbook">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="textbook"
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="textbook"
+                  >Required Textbook</label
+                >
+                <br />
+                <label class="form-check-label" for="textbook"> Title </label>
+                <input type="text" />
+                <br />
+                <label class="form-check-label" for="textbook"> ISBN </label>
+                <input type="text" />
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="software"
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="software"
+                  >Required Software:</label
+                >
+                <br />
+                <input type="text" />
+                <br />
+                <div id="addSoftware"></div>
+                <button class="add addSoftware">
+                  <img
+                    src="./public/imgs/plusIcon.png"
+                    alt="Plus icon"
+                    class="plus"
+                  />
+                  Add
+                </button>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="other"
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="other">Other:</label>
+                <br />
+                <input type="text" />
+                <br />
+                <div id="addOther"></div>
+                <button class="add addOther">
+                  <img
+                    src="./public/imgs/plusIcon.png"
+                    alt="Plus icon"
+                    class="plus"
+                  />
+                  Add
+                </button>
+              </div>
+              <div id="addContact"></div>
+              <button class="add">
                 <img
                   src="./public/imgs/plusIcon.png"
                   alt="Plus icon"
@@ -225,224 +232,241 @@
                 Add
               </button>
             </div>
-            <div id="addContact"></div>
-            <button class="add">
-              <img
-                src="./public/imgs/plusIcon.png"
-                alt="Plus icon"
-                class="plus"
-              />
-              Add
-            </button>
           </div>
         </div>
-      </div>
-      <!-- GRADE SCALE -->
-      <div class="card col-md-10" id="gradingScale">
-        <div class="card-body">
-          <div class="sideBtns">
-            <button class="collapse" id="cgradingScale">
+        <!-- GRADE SCALE -->
+        <div class="dragster-block card col-md-10" id="gradingScale">
+          <div class="card-body">
+            <div class="sideBtns">
+              <button class="settings" id="sgradingScale">
+                <img
+                  class="s sgradingScale"
+                  src="./public/imgs/settingsIcon.png"
+                  alt="settings icon"
+                />
+              </button>
+              <button class="collapse" id="cgradingScale">
+                <img
+                  class="c cgradingScale"
+                  src="./public/imgs/collapseIcon.png"
+                  alt="collapse icon"
+                />
+              </button>
+              <button id="xgradingScale" class="removeSection">
+                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+              </button>
+            </div>
+            <h5 class="card-title">Grading</h5>
+            <button id="lgradingScale" class="lockSection">
               <img
-                class="c cgradingScale"
-                src="./public/imgs/collapseIcon.png"
-                alt="collapse icon"
+                class="lockgradingScale lock"
+                src="./public/imgs/unlockIcon.png"
+                alt="lock icon"
               />
             </button>
-            <button id="xgradingScale" class="removeSection">
-              <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
-            </button>
-          </div>
-          <h5 class="card-title">Grading</h5>
-          <button id="lgradingScale" class="lockSection">
-            <img
-              class="lockgradingScale lock"
-              src="./public/imgs/unlockIcon.png"
-              alt="lock icon"
-            />
-          </button>
-          <div class="hide" id="hgradingScale">
-            <table style="width: 100%">
-              <tr>
-                <th>Letter</th>
-                <th>Percentage</th>
-              </tr>
-              <tr>
-                <td><input type="text" value="A+" /></td>
-                <td><input type="text" value="97-100%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="A" /></td>
-                <td><input type="text" value="94-96%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="A-" /></td>
-                <td><input type="text" value="90-93%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="B+" /></td>
-                <td><input type="text" value="87-89%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="B" /></td>
-                <td><input type="text" value="84-86%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="B-" /></td>
-                <td><input type="text" value="80-83%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="C+" /></td>
-                <td><input type="text" value="77-79%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="C" /></td>
-                <td><input type="text" value="73-76%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="C-" /></td>
-                <td><input type="text" value="70-72%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="D+" /></td>
-                <td><input type="text" value="67-69%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="D" /></td>
-                <td><input type="text" value="65-66%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="D-" /></td>
-                <td><input type="text" value="64-60%" /></td>
-              </tr>
-              <tr>
-                <td><input type="text" value="F" /></td>
-                <td><input type="text" value="<59%" /></td>
-              </tr>
-            </table>
+            <div class="hide" id="hgradingScale">
+              <table style="width: 100%">
+                <tr>
+                  <th>Letter</th>
+                  <th>Percentage</th>
+                </tr>
+                <tr>
+                  <td><input type="text" value="A+" /></td>
+                  <td><input type="text" value="97-100%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="A" /></td>
+                  <td><input type="text" value="94-96%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="A-" /></td>
+                  <td><input type="text" value="90-93%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="B+" /></td>
+                  <td><input type="text" value="87-89%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="B" /></td>
+                  <td><input type="text" value="84-86%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="B-" /></td>
+                  <td><input type="text" value="80-83%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="C+" /></td>
+                  <td><input type="text" value="77-79%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="C" /></td>
+                  <td><input type="text" value="73-76%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="C-" /></td>
+                  <td><input type="text" value="70-72%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="D+" /></td>
+                  <td><input type="text" value="67-69%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="D" /></td>
+                  <td><input type="text" value="65-66%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="D-" /></td>
+                  <td><input type="text" value="64-60%" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" value="F" /></td>
+                  <td><input type="text" value="<59%" /></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- SCHEDULE -->
-      <div class="card col-md-10" id="schedule">
-        <div class="card-body">
-          <div class="sideBtns">
-            <button class="collapse" id="cschedule">
+        <!-- SCHEDULE -->
+        <div class="dragster-block card col-md-10" id="schedule">
+          <div class="card-body">
+            <div class="sideBtns">
+              <button class="collapse" id="cschedule">
+                <img
+                  class="c cschedule"
+                  src="./public/imgs/collapseIcon.png"
+                  alt="collapse icon"
+                />
+              </button>
+              <button id="xschedule" class="removeSection">
+                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+              </button>
+            </div>
+            <h5 class="card-title">Course Schedule</h5>
+            <button id="lschedule" class="lockSection">
               <img
-                class="c cschedule"
-                src="./public/imgs/collapseIcon.png"
-                alt="collapse icon"
+                class="lockschedule lock"
+                src="./public/imgs/unlockIcon.png"
+                alt="lock icon"
               />
             </button>
-            <button id="xschedule" class="removeSection">
-              <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
-            </button>
-          </div>
-          <h5 class="card-title">Course Schedule</h5>
-          <button id="lschedule" class="lockSection">
-            <img
-              class="lockschedule lock"
-              src="./public/imgs/unlockIcon.png"
-              alt="lock icon"
-            />
-          </button>
-          <div class="hide" id="hschedule">
-            <p class="card-text">Email: Phone</p>
+            <div class="hide" id="hschedule">
+              <p class="card-text">Email: Phone</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- ATTENDANCE -->
-      <div class="card col-md-10" id="attendance">
-        <div class="card-body">
-          <div class="sideBtns">
-            <button class="collapse" id="cattendance">
+        <!-- ATTENDANCE -->
+        <div class="dragster-block card col-md-10" id="attendance">
+          <div class="card-body">
+            <div class="sideBtns">
+              <button class="settings" id="sattendance">
+                <img
+                  class="s sattendance"
+                  src="./public/imgs/settingsIcon.png"
+                  alt="settings icon"
+                />
+              </button>
+              <button class="collapse" id="cattendance">
+                <img
+                  class="c cattendance"
+                  src="./public/imgs/collapseIcon.png"
+                  alt="collapse icon"
+                />
+              </button>
+              <button id="xattendance" class="removeSection">
+                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+              </button>
+            </div>
+            <h5 class="card-title">Attendance</h5>
+            <button id="lattendance" class="lockSection">
               <img
-                class="c cattendance"
-                src="./public/imgs/collapseIcon.png"
-                alt="collapse icon"
+                class="lockattendance lock"
+                src="./public/imgs/unlockIcon.png"
+                alt="lock icon"
               />
             </button>
-            <button id="xattendance" class="removeSection">
-              <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
-            </button>
-          </div>
-          <h5 class="card-title">Attendance</h5>
-          <button id="lattendance" class="lockSection">
-            <img
-              class="lockattendance lock"
-              src="./public/imgs/unlockIcon.png"
-              alt="lock icon"
-            />
-          </button>
-          <div class="hide" id="hattendance">
-            <p class="card-text">Email: Phone</p>
+            <div class="hide" id="hattendance">
+              <p class="card-text">Email: Phone</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- TITLE IX -->
-      <div class="card col-md-10" id="titleIX">
-        <div class="card-body">
-          <div class="sideBtns">
-            <button class="collapse" id="ctitleIX">
+        <!-- TITLE IX -->
+        <div class="dragster-block locked card col-md-10" id="titleIX">
+          <div class="card-body">
+            <div class="sideBtns">
+              <button class="collapse" id="ctitleIX">
+                <img
+                  class="c ctitleIX"
+                  src="./public/imgs/collapseIcon.png"
+                  alt="collapse icon"
+                />
+              </button>
+              <button id="xtitleIX" class="removeSection">
+                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+              </button>
+            </div>
+            <h5 class="card-title">Title IX</h5>
+            <button id="ltitleIX" class="lockSection">
               <img
-                class="c ctitleIX"
-                src="./public/imgs/collapseIcon.png"
-                alt="collapse icon"
+                class="lock locktitleIX"
+                src="./public/imgs/lockIcon.png"
+                alt="lock icon"
               />
             </button>
-            <button id="xtitleIX" class="removeSection">
-              <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
-            </button>
-          </div>
-          <h5 class="card-title">Title IX</h5>
-          <button id="ltitleIX" class="lockSection">
-            <img
-              class="lock locktitleIX"
-              src="./public/imgs/unlockIcon.png"
-              alt="lock icon"
-            />
-          </button>
-          <div class="hide" id="htitleIX">
-            <textarea name="grading" id="grading" rows="7">
+            <div class="hide" id="htitleIX">
+              <textarea
+                name="grading"
+                id="grading"
+                rows="12"
+                readonly
+                class="locked"
+              >
             Title IX is a federal law that provides that no person be excluded on the basis of sex from participation in, be denied benefits of, or be subjected to discrimination under any education program or activity.  Both Title IX and university policy make clear that sexual violence and harassment based on sex is prohibited.  An individual who believes they have been subjected to sexual violence or harassed on the basis of sex can seek support, including counseling and academic support, from the university.  If you or someone you know has been harassed on the basis of sex or sexually assaulted, you can find information and resources at Links to an external site.https://sexualviolenceprevention.asu.edu/faqsLinks to an external site.. 
 
             As a mandated reporter, I am obligated to report any information I become aware of regarding alleged acts of sexual discrimination, including sexual violence and dating violence.  ASU Counseling Services, Links to an external site.https://eoss.asu.edu/counselingLinks to an external site., is available if you wish to discuss any concerns confidentially and privately.
           </textarea
-            >
+              >
+            </div>
           </div>
         </div>
-      </div>
-      <!-- CORONA -->
-      <div class="card col-md-10" id="corona">
-        <div class="card-body">
-          <div class="sideBtns">
-            <button class="collapse" id="ccorona">
+        <!-- CORONA -->
+        <div class="dragster-block card col-md-10 locked" id="corona">
+          <div class="card-body">
+            <div class="sideBtns">
+              <button class="collapse" id="ccorona">
+                <img
+                  class="c ccorona"
+                  src="./public/imgs/collapseIcon.png"
+                  alt="collapse icon"
+                />
+              </button>
+              <button id="xcorona" class="removeSection">
+                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+              </button>
+            </div>
+            <h5 class="card-title">Corona Virus</h5>
+            <button id="lcorona" class="lockSection">
               <img
-                class="c ccorona"
-                src="./public/imgs/collapseIcon.png"
-                alt="collapse icon"
+                class="lock lockcorona"
+                src="./public/imgs/lockIcon.png"
+                alt="lock icon"
               />
             </button>
-            <button id="xcorona" class="removeSection">
-              <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
-            </button>
-          </div>
-          <h5 class="card-title">Corona Virus</h5>
-          <button id="lcorona" class="lockSection">
-            <img
-              class="lock lockcorona"
-              src="./public/imgs/unlockIcon.png"
-              alt="lock icon"
-            />
-          </button>
-          <div class="hide" id="hcorona">
-            <textarea name="corona" id="corona" rows="7">
+            <div class="hide" id="hcorona">
+              <textarea
+                name="corona"
+                id="corona"
+                rows="14"
+                readonly
+                class="locked"
+              >
               All on-campus ASU students are required to complete the Community of Care Links to an external site.training program prior to arriving on campus. This training is designed to inform, educate, and encourage healthy living and learning on campus and as a member of the ASU community. 
 
               The CDC currently recommends wearing face coverings when distancing measures are difficult to maintain. Everyone is required to wear a face cover while in ASU buildings and community spaces, regardless of distance. This includes all classrooms and laboratory spaces. Students who have a medical condition or disability and are unable to wear a cloth face covering may engage in the ADA interactive process to identify a reasonable accommodation by contacting the Disability Resource Center. A limited number of disposable face coverings will be available for students who need one.
               
               Students should monitor their temperature each day before arriving on campus. If your temperature is 100.4 degrees or higher, you should stay home and seek health advice.  Please contact your faculty if you are unable to attend in person.For additional information and the most up-to-date information, please visit the ASU Novel Coronavirus website.
           </textarea
-            >
+              >
+            </div>
           </div>
         </div>
       </div>

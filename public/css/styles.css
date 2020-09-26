@@ -36,7 +36,6 @@ main {
 }
 
 .card {
-  border: 1px solid #e3e3e3;
   margin: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -55,15 +54,23 @@ h5 {
   float: right;
 }
 
-.x,
-.c {
+.x {
   height: 12px;
 }
 
+.c {
+  height: 13px;
+}
+
+.s {
+  height: 16px;
+}
+
 .removeSection,
-.collapse {
+.collapse,
+.settings {
   border: none;
-  background-color: white;
+  background-color: transparent;
   /* float: right; */
 }
 
@@ -71,15 +78,33 @@ h5 {
   display: inline;
 }
 
+.coll {
+  text-align: right;
+}
+
+#collapseAll {
+  background-color: #36494e;
+  color: white;
+}
+
+#collapseAll:hover {
+  background-color: #6db58a;
+  color: black;
+}
+
 .lock {
   height: 25px;
   position: relative;
-  bottom: 5px;
+  bottom: 7px;
 }
 
 .lockSection {
   border: none;
-  background-color: white;
+  background-color: transparent;
+}
+
+.locked {
+  background-color: #bfbfbf;
 }
 
 .plus {
@@ -88,13 +113,17 @@ h5 {
 
 .add {
   border: none;
-  background-color: white;
+  background-color: transparent;
 }
 
 input {
   border: none;
   border-bottom: 1px solid #d2d1d1;
   margin: 1px;
+}
+
+#gradingScale input {
+  width: 100px;
 }
 
 textarea {
@@ -117,13 +146,19 @@ textarea {
 
 #renderBtn {
   background-color: #79b993;
-  color: black;
+  color: #36494e;
   box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
   font-size: 22px;
-  padding: 10px 18px;
+  padding: 8px 14px;
   text-decoration: none;
   font-weight: 700;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }
 
 /* ___________FOOTER___________ */
