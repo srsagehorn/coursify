@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
+app.get("/form", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/form.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening at localhost:${PORT}`);
 });

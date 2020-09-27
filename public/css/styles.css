@@ -8,6 +8,52 @@
   width: 80%;
 }
 
+/* ___________HOME PAGE ___________ */
+#mainLogo {
+  font-size: 120px;
+  font-family: "Abril Fatface", cursive;
+  color: #6db58a;
+  text-decoration: none;
+  margin-top: 100px;
+  padding-top: 20px;
+  padding-left: 50px;
+  background-color: #e3e3e3;
+  width: 100%;
+}
+
+#right {
+  text-align: right;
+}
+
+#spacer {
+  height: 200px;
+}
+
+#homePage {
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.75);
+  height: 600px;
+  position: relative;
+  right: 80px;
+  bottom: 120px;
+}
+
+#description {
+  color: white;
+  margin-top: 250px;
+  margin-left: 50px;
+}
+
+#dark {
+  background-color: #36494e;
+  height: 100%;
+}
+
+#generator:hover {
+  border: none;
+  background-color: #6db58a;
+  color: black;
+}
+
 /* ___________HEADER___________ */
 
 header {
@@ -20,7 +66,7 @@ header {
   text-decoration: none;
 }
 
-#colorblock {
+.colorblock {
   color: #36494e;
 }
 
