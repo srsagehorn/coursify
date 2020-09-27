@@ -1,3 +1,5 @@
+// import { Sortable } from "sortablejs";
+
 const sections = [
   "introduction",
   "contact",
@@ -57,6 +59,7 @@ let coll = [
 
 let collapsed = false;
 
+// When a user clicks on the x it alerts and asks if they are sure, then removes the section
 const remove = function (i) {
   $("#x" + sections[i]).on("click", function () {
     if (confirm("Are you sure you want to remove this section?")) {
@@ -65,30 +68,32 @@ const remove = function (i) {
   });
 };
 
+// collapses individual sections down to just their title
 const collapse = function (i) {
   $("#c" + sections[i]).on("click", function () {
     if (coll[i]) {
       $("#h" + sections[i]).show();
-      $(".c" + sections[i]).attr("src", "./public/imgs/collapseIcon.png");
+      $(".c" + sections[i]).attr("src", "./imgs/collapseIcon.png");
       coll[i] = false;
     } else {
       $("#h" + sections[i]).hide();
-      $(".c" + sections[i]).attr("src", "./public/imgs/uncollapseIcon.png");
+      $(".c" + sections[i]).attr("src", "./imgs/uncollapseIcon.png");
       coll[i] = true;
     }
   });
 };
 
+// locks the sections so that the text is no longer editable
 const lock = function (i) {
   $("#l" + sections[i]).on("click", function () {
     if (!locked[i]) {
-      $(".lock" + sections[i]).attr("src", "./public/imgs/lockIcon.png");
+      $(".lock" + sections[i]).attr("src", "./imgs/lockIcon.png");
       $("#" + sections[i]).addClass("locked");
       $("#" + sections[i] + " :input").addClass("locked");
       $("#" + sections[i] + " :input").prop("readonly", true);
       locked[i] = true;
     } else {
-      $(".lock" + sections[i]).attr("src", "./public/imgs/unlockIcon.png");
+      $(".lock" + sections[i]).attr("src", "./imgs/unlockIcon.png");
       $("#" + sections[i] + " :input").removeClass("locked");
       $("#" + sections[i] + " :input").prop("readonly", false);
       $("#" + sections[i]).removeClass("locked");
@@ -115,7 +120,7 @@ $(".addSoftware").on("click", function (event) {
   $("#addSoftware").append(`
   <input type="text" class = "addedSoftware" /><br>`);
 });
-
+// adds a new other field
 $(".addOther").on("click", function (event) {
   event.preventDefault();
   $("#addOther").append(`
@@ -127,7 +132,7 @@ $("#collapseAll").on("click", function () {
   if (collapsed) {
     $(".hide").show();
     $("#collapseAll").text("Collapse All Sections");
-    $(".c").attr("src", "./public/imgs/collapseIcon.png");
+    $(".c").attr("src", "./imgs/collapseIcon.png");
     coll = [
       false,
       false,
@@ -150,7 +155,7 @@ $("#collapseAll").on("click", function () {
   } else {
     $(".hide").hide();
     $("#collapseAll").text("Open All Sections");
-    $(".c").attr("src", "./public/imgs/uncollapseIcon.png");
+    $(".c").attr("src", "./imgs/uncollapseIcon.png");
     coll = [
       true,
       true,
@@ -173,7 +178,7 @@ $("#collapseAll").on("click", function () {
   }
 });
 
-// throws an alert to confirm they want to delete a section
+// loops through the sections and places these listeners on each button
 for (let i = 0; i < sections.length; i++) {
   // remove the selection
   remove(i);

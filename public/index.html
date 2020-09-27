@@ -15,7 +15,7 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./public/css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="./css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
@@ -33,27 +33,27 @@
         </button>
       </div>
       <!-- need to add a modal that asks if they would like to start from a e or create their own and then select parts they want -->
-      <div class="dragster-region">
+      <div class="dragndrop list">
         <!-- INTRODUCTION -->
-        <div class="dragster-block card col-md-10" id="introduction">
+        <div class="card col-md-10" id="introduction">
           <div class="card-body">
             <div class="sideBtns">
               <button class="collapse" id="cintroduction">
                 <img
                   class="c cintroduction"
-                  src="./public/imgs/collapseIcon.png"
+                  src="./imgs/collapseIcon.png"
                   alt="collapse icon"
                 />
               </button>
               <button class="removeSection" id="xintroduction">
-                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+                <img class="x" src="./imgs/xIcon.png" alt="x icon" />
               </button>
             </div>
             <h5 class="card-title">Introduction</h5>
             <button class="lockSection" id="lintroduction">
               <img
                 class="lock lockintroduction"
-                src="./public/imgs/unlockIcon.png"
+                src="./imgs/unlockIcon.png"
                 alt="lock icon"
               />
             </button>
@@ -68,25 +68,25 @@
           </div>
         </div>
         <!-- CONTACT INFO -->
-        <div class="dragster-block card col-md-10" id="contact">
+        <div class="card col-md-10" id="contact">
           <div class="card-body">
             <div class="sideBtns">
               <button class="collapse" id="ccontact">
                 <img
                   class="c ccontact"
-                  src="./public/imgs/collapseIcon.png"
+                  src="./imgs/collapseIcon.png"
                   alt="collapse icon"
                 />
               </button>
               <button id="xcontact" class="removeSection">
-                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+                <img class="x" src="./imgs/xIcon.png" alt="x icon" />
               </button>
             </div>
             <h5 class="card-title">Contact Information</h5>
             <button id="lcontact" class="lockSection">
               <img
                 class="lock lockcontact"
-                src="./public/imgs/unlockIcon.png"
+                src="./imgs/unlockIcon.png"
                 alt="lock icon"
               />
             </button>
@@ -127,36 +127,32 @@
               </div>
               <div id="addContact"></div>
               <button class="add addContact">
-                <img
-                  src="./public/imgs/plusIcon.png"
-                  alt="Plus icon"
-                  class="plus"
-                />
+                <img src="./imgs/plusIcon.png" alt="Plus icon" class="plus" />
                 Add
               </button>
             </div>
           </div>
         </div>
         <!-- TEXTBOOK -->
-        <div class="dragster-block card col-md-10" id="textbook">
+        <div class="card col-md-10" id="textbook">
           <div class="card-body">
             <div class="sideBtns">
               <button class="collapse" id="ctextbook">
                 <img
                   class="c ctextbook"
-                  src="./public/imgs/collapseIcon.png"
+                  src="./imgs/collapseIcon.png"
                   alt="collapse icon"
                 />
               </button>
               <button id="xtextbook" class="removeSection">
-                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+                <img class="x" src="./imgs/xIcon.png" alt="x icon" />
               </button>
             </div>
             <h5 class="card-title">Textbook and Required Materials</h5>
             <button id="ltextbook" class="lockSection">
               <img
                 class="lock locktextbook"
-                src="./public/imgs/unlockIcon.png"
+                src="./imgs/unlockIcon.png"
                 alt="lock icon"
               />
             </button>
@@ -193,11 +189,7 @@
                 <br />
                 <div id="addSoftware"></div>
                 <button class="add addSoftware">
-                  <img
-                    src="./public/imgs/plusIcon.png"
-                    alt="Plus icon"
-                    class="plus"
-                  />
+                  <img src="./imgs/plusIcon.png" alt="Plus icon" class="plus" />
                   Add
                 </button>
               </div>
@@ -214,53 +206,45 @@
                 <br />
                 <div id="addOther"></div>
                 <button class="add addOther">
-                  <img
-                    src="./public/imgs/plusIcon.png"
-                    alt="Plus icon"
-                    class="plus"
-                  />
+                  <img src="./imgs/plusIcon.png" alt="Plus icon" class="plus" />
                   Add
                 </button>
               </div>
               <div id="addContact"></div>
               <button class="add">
-                <img
-                  src="./public/imgs/plusIcon.png"
-                  alt="Plus icon"
-                  class="plus"
-                />
+                <img src="./imgs/plusIcon.png" alt="Plus icon" class="plus" />
                 Add
               </button>
             </div>
           </div>
         </div>
         <!-- GRADE SCALE -->
-        <div class="dragster-block card col-md-10" id="gradingScale">
+        <div class="card col-md-10" id="gradingScale">
           <div class="card-body">
             <div class="sideBtns">
               <button class="settings" id="sgradingScale">
                 <img
                   class="s sgradingScale"
-                  src="./public/imgs/settingsIcon.png"
+                  src="./imgs/settingsIcon.png"
                   alt="settings icon"
                 />
               </button>
               <button class="collapse" id="cgradingScale">
                 <img
                   class="c cgradingScale"
-                  src="./public/imgs/collapseIcon.png"
+                  src="./imgs/collapseIcon.png"
                   alt="collapse icon"
                 />
               </button>
               <button id="xgradingScale" class="removeSection">
-                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+                <img class="x" src="./imgs/xIcon.png" alt="x icon" />
               </button>
             </div>
             <h5 class="card-title">Grading</h5>
             <button id="lgradingScale" class="lockSection">
               <img
                 class="lockgradingScale lock"
-                src="./public/imgs/unlockIcon.png"
+                src="./imgs/unlockIcon.png"
                 alt="lock icon"
               />
             </button>
@@ -327,25 +311,25 @@
           </div>
         </div>
         <!-- SCHEDULE -->
-        <div class="dragster-block card col-md-10" id="schedule">
+        <div class="card col-md-10" id="schedule">
           <div class="card-body">
             <div class="sideBtns">
               <button class="collapse" id="cschedule">
                 <img
                   class="c cschedule"
-                  src="./public/imgs/collapseIcon.png"
+                  src="./imgs/collapseIcon.png"
                   alt="collapse icon"
                 />
               </button>
               <button id="xschedule" class="removeSection">
-                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+                <img class="x" src="./imgs/xIcon.png" alt="x icon" />
               </button>
             </div>
             <h5 class="card-title">Course Schedule</h5>
             <button id="lschedule" class="lockSection">
               <img
                 class="lockschedule lock"
-                src="./public/imgs/unlockIcon.png"
+                src="./imgs/unlockIcon.png"
                 alt="lock icon"
               />
             </button>
@@ -355,32 +339,32 @@
           </div>
         </div>
         <!-- ATTENDANCE -->
-        <div class="dragster-block card col-md-10" id="attendance">
+        <div class="card col-md-10" id="attendance">
           <div class="card-body">
             <div class="sideBtns">
               <button class="settings" id="sattendance">
                 <img
                   class="s sattendance"
-                  src="./public/imgs/settingsIcon.png"
+                  src="./imgs/settingsIcon.png"
                   alt="settings icon"
                 />
               </button>
               <button class="collapse" id="cattendance">
                 <img
                   class="c cattendance"
-                  src="./public/imgs/collapseIcon.png"
+                  src="./imgs/collapseIcon.png"
                   alt="collapse icon"
                 />
               </button>
               <button id="xattendance" class="removeSection">
-                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+                <img class="x" src="./imgs/xIcon.png" alt="x icon" />
               </button>
             </div>
             <h5 class="card-title">Attendance</h5>
             <button id="lattendance" class="lockSection">
               <img
                 class="lockattendance lock"
-                src="./public/imgs/unlockIcon.png"
+                src="./imgs/unlockIcon.png"
                 alt="lock icon"
               />
             </button>
@@ -390,25 +374,25 @@
           </div>
         </div>
         <!-- TITLE IX -->
-        <div class="dragster-block locked card col-md-10" id="titleIX">
+        <div class="locked card col-md-10" id="titleIX">
           <div class="card-body">
             <div class="sideBtns">
               <button class="collapse" id="ctitleIX">
                 <img
                   class="c ctitleIX"
-                  src="./public/imgs/collapseIcon.png"
+                  src="./imgs/collapseIcon.png"
                   alt="collapse icon"
                 />
               </button>
               <button id="xtitleIX" class="removeSection">
-                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+                <img class="x" src="./imgs/xIcon.png" alt="x icon" />
               </button>
             </div>
             <h5 class="card-title">Title IX</h5>
             <button id="ltitleIX" class="lockSection">
               <img
                 class="lock locktitleIX"
-                src="./public/imgs/lockIcon.png"
+                src="./imgs/lockIcon.png"
                 alt="lock icon"
               />
             </button>
@@ -429,25 +413,25 @@
           </div>
         </div>
         <!-- CORONA -->
-        <div class="dragster-block card col-md-10 locked" id="corona">
+        <div class="card col-md-10 locked" id="corona">
           <div class="card-body">
             <div class="sideBtns">
               <button class="collapse" id="ccorona">
                 <img
                   class="c ccorona"
-                  src="./public/imgs/collapseIcon.png"
+                  src="./imgs/collapseIcon.png"
                   alt="collapse icon"
                 />
               </button>
               <button id="xcorona" class="removeSection">
-                <img class="x" src="./public/imgs/xIcon.png" alt="x icon" />
+                <img class="x" src="./imgs/xIcon.png" alt="x icon" />
               </button>
             </div>
             <h5 class="card-title">Corona Virus</h5>
             <button id="lcorona" class="lockSection">
               <img
                 class="lock lockcorona"
-                src="./public/imgs/lockIcon.png"
+                src="./imgs/lockIcon.png"
                 alt="lock icon"
               />
             </button>
@@ -499,6 +483,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script src="./public/js/index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

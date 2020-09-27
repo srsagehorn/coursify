@@ -16,6 +16,11 @@
   "bugs": {
     "url": "https://github.com/srsagehorn/coursify/issues"
   },
-  "homepage": "https://github.com/srsagehorn/coursify#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/srsagehorn/syligen#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sortablejs": "^1.12.0"
+  },
+  "devDependencies": {},
+  "keywords": []
 }
