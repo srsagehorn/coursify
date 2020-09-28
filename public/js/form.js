@@ -1,103 +1,65 @@
-// import { Sortable } from "sortablejs";
-
-const sections = [
-  "introduction",
-  "contact",
-  "textbook",
-  "courseObjectives",
-  "gradingScale",
-  "latePolicy",
-  "schedule",
-  "netiquette",
-  "attendance",
-  "dropAndAdd",
-  "titleIX",
-  "corona",
-  "gradeAppeals",
-  "studentSuccess",
-  "academicIntegrity",
-  "accessability",
+let sections = [
+  { name: "introduction", locked: false, collapsed: false },
+  { name: "contact", locked: false, collapsed: false },
+  { name: "textbook", locked: false, collapsed: false },
+  { name: "courseObjectives", locked: false, collapsed: false },
+  { name: "gradingScale", locked: false, collapsed: false },
+  { name: "latePolicy", locked: false, collapsed: false },
+  { name: "schedule", locked: false, collapsed: false },
+  { name: "netiquette", locked: false, collapsed: false },
+  { name: "attendance", locked: false, collapsed: false },
+  { name: "dropAndAdd", locked: false, collapsed: false },
+  { name: "titleIX", locked: false, collapsed: false },
+  { name: "corona", locked: false, collapsed: false },
+  { name: "gradeAppeals", locked: false, collapsed: false },
+  { name: "studentSuccess", locked: false, collapsed: false },
+  { name: "academicIntegrity", locked: false, collapsed: false },
+  { name: "accessability", locked: false, collapsed: false },
 ];
 
-let locked = [
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  true,
-  true,
-];
-
-let coll = [
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-];
+const doc = new jsPDF();
 
 let collapsed = false;
 
 // When a user clicks on the x it alerts and asks if they are sure, then removes the section
 const remove = function (i) {
-  $("#x" + sections[i]).on("click", function () {
+  $("#x" + sections[i].name).on("click", function () {
     if (confirm("Are you sure you want to remove this section?")) {
-      $("#" + sections[i]).hide();
+      $("#" + sections[i].name).hide();
     }
   });
 };
 
 // collapses individual sections down to just their title
 const collapse = function (i) {
-  $("#c" + sections[i]).on("click", function () {
-    if (coll[i]) {
-      $("#h" + sections[i]).show();
-      $(".c" + sections[i]).attr("src", "./imgs/collapseIcon.png");
-      coll[i] = false;
+  $("#c" + sections[i].name).on("click", function () {
+    if (sections[i].collapsed) {
+      $("#h" + sections[i].name).show();
+      $(".c" + sections[i].name).attr("src", "./imgs/collapseIcon.png");
+      sections[i].collapsed = false;
     } else {
-      $("#h" + sections[i]).hide();
-      $(".c" + sections[i]).attr("src", "./imgs/uncollapseIcon.png");
-      coll[i] = true;
+      $("#h" + sections[i].name).hide();
+      $(".c" + sections[i].name).attr("src", "./imgs/uncollapseIcon.png");
+      sections[i].collapsed = true;
     }
   });
 };
 
 // locks the sections so that the text is no longer editable
 const lock = function (i) {
-  $("#l" + sections[i]).on("click", function () {
-    if (!locked[i]) {
+  $("#l" + sections[i].name).on("click", function () {
+    if (!sections[i].locked) {
       $(".lock" + sections[i]).attr("src", "./imgs/lockIcon.png");
-      $("#" + sections[i]).addClass("locked");
-      $("#" + sections[i] + " :input").addClass("locked");
-      $("#" + sections[i] + " :input").prop("readonly", true);
-      locked[i] = true;
+      $("#" + sections[i].name).addClass("locked");
+      $("#" + sections[i].name + " :input").addClass("locked");
+      $("#" + sections[i].name + " :input").prop("readonly", true);
+      sections[i].locked = true;
     } else {
-      $(".lock" + sections[i]).attr("src", "./imgs/unlockIcon.png");
-      $("#" + sections[i] + " :input").removeClass("locked");
-      $("#" + sections[i] + " :input").prop("readonly", false);
-      $("#" + sections[i]).removeClass("locked");
-      locked[i] = false;
+      $(".lock" + sections[i].name).attr("src", "./imgs/unlockIcon.png");
+      $("#" + sections[i].name + " :input").removeClass("locked");
+      $("#" + sections[i].name + " :input").prop("readonly", false);
+      $("#" + sections[i].name).removeClass("locked");
+      sections[i].locked = false;
     }
   });
 };
@@ -133,47 +95,17 @@ $("#collapseAll").on("click", function () {
     $(".hide").show();
     $("#collapseAll").text("Collapse All Sections");
     $(".c").attr("src", "./imgs/collapseIcon.png");
-    coll = [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
+    sections.forEach((i) => {
+      i.collapsed = false;
+    });
     collapsed = false;
   } else {
     $(".hide").hide();
     $("#collapseAll").text("Open All Sections");
     $(".c").attr("src", "./imgs/uncollapseIcon.png");
-    coll = [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-    ];
+    sections.forEach((i) => {
+      i.collapsed = true;
+    });
     collapsed = true;
   }
 });
@@ -187,3 +119,35 @@ for (let i = 0; i < sections.length; i++) {
   // collapse the selection
   collapse(i);
 }
+
+// creates the drag and drop functionality
+new Sortable(sortablelist, {
+  animation: 300,
+  ghostClass: "sortable-ghost",
+  handle: ".move",
+});
+
+// // ------TEXT FROM FORM---------//
+// // Introduction
+// let introduction = $("#introductionInput").val();
+// //Contact
+// let contact = $("");
+
+$("#renderBtn").on("click", function (event) {
+  event.preventDefault();
+  // create pdf
+  doc.text(
+    `Introduction
+    ${$("#introductionInput").val()}
+How to contact me
+  Email: ${$("#email").val()}
+  Phone Number: ${$("#number").val()}
+  Office Hours: ${$("#officehrs").val()}
+  Course Schedule: ${$("#scheduleInput").vla()}
+  Attendance Policy: ${$("#attendanceInput").vla()}
+  `,
+    10,
+    10
+  );
+  doc.save("syllabus");
+});

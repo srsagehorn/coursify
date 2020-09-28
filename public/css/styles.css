@@ -8,17 +8,26 @@
   width: 80%;
 }
 
+.btn:hover {
+  text-decoration: none;
+}
+
 /* ___________HOME PAGE ___________ */
+#indexHead {
+  background-color: #e3e3e3;
+  margin-top: 100px;
+  padding-top: 20px;
+  padding-left: 50px;
+  width: 100%;
+}
+
 #mainLogo {
   font-size: 120px;
   font-family: "Abril Fatface", cursive;
   color: #6db58a;
   text-decoration: none;
-  margin-top: 100px;
-  padding-top: 20px;
-  padding-left: 50px;
-  background-color: #e3e3e3;
-  width: 100%;
+  position: relative;
+  top: 22px;
 }
 
 #right {
@@ -30,28 +39,57 @@
 }
 
 #homePage {
-  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.75);
-  height: 600px;
+  box-shadow: 3px 3px 7px -2px rgba(0, 0, 0, 0.75);
+  width: 90%;
   position: relative;
   right: 80px;
   bottom: 120px;
 }
 
+#down {
+  position: relative;
+  bottom: 200px;
+}
+
 #description {
   color: white;
-  margin-top: 250px;
+  margin-top: 400px;
   margin-left: 50px;
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
 }
 
 #dark {
   background-color: #36494e;
   height: 100%;
 }
+#generator {
+  margin-top: 40px;
+  font-weight: 700;
+  background-color: #6db58a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+#allignRight {
+  text-align: right;
+}
 
 #generator:hover {
   border: none;
-  background-color: #6db58a;
-  color: black;
+  background-color: #bfbfbf;
+  color: #36494e;
+}
+
+#school {
+  width: 300px;
+  position: relative;
+  top: 25px;
+  margin-right: 10px;
+  color: white;
 }
 
 /* ___________HEADER___________ */
@@ -79,6 +117,7 @@ main {
   padding-bottom: 40px;
   z-index: 1;
   border-radius: 5px;
+  font-family: "Oxygen", sans-serif;
 }
 
 .card {
@@ -94,6 +133,7 @@ main {
 
 h5 {
   display: inline;
+  font-weight: 700;
 }
 
 .sideBtns {
@@ -114,10 +154,22 @@ h5 {
 
 .removeSection,
 .collapse,
-.settings {
+.settings,
+.move {
   border: none;
   background-color: transparent;
-  /* float: right; */
+}
+
+.m {
+  height: 30px;
+}
+
+.move {
+  float: right;
+  position: relative;
+  right: 70px;
+  top: 20px;
+  cursor: move;
 }
 
 .collapse:not(.show) {
@@ -170,6 +222,7 @@ input {
   border: none;
   border-bottom: 1px solid #d2d1d1;
   margin: 1px;
+  background-color: transparent;
 }
 
 #gradingScale input {
@@ -180,6 +233,10 @@ textarea {
   border: none;
   border-bottom: 1px solid #d2d1d1;
   width: 100%;
+}
+
+.sortable-ghost {
+  background-color: white;
 }
 
 .addedContact {
