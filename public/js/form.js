@@ -9,17 +9,32 @@ let sections = [
   { name: "netiquette", locked: false, collapsed: false },
   { name: "attendance", locked: false, collapsed: false },
   { name: "dropAndAdd", locked: false, collapsed: false },
-  { name: "titleIX", locked: false, collapsed: false },
-  { name: "corona", locked: false, collapsed: false },
+  { name: "titleIX", locked: true, collapsed: false },
+  { name: "corona", locked: true, collapsed: false },
   { name: "gradeAppeals", locked: false, collapsed: false },
   { name: "studentSuccess", locked: false, collapsed: false },
   { name: "academicIntegrity", locked: false, collapsed: false },
   { name: "accessability", locked: false, collapsed: false },
 ];
 
-const doc = new jsPDF();
+const doc = new jsPDF({
+  format: "letter",
+});
 
 let collapsed = false;
+
+// If the university entered is not ASU then take off default text
+$("#generator").on("click", function () {
+  if (
+    !$("#school").val() == "Arizona State University" ||
+    "ASU" ||
+    "Arizona State" ||
+    ""
+  ) {
+    $("#coronaInput").text("");
+    sections.corona.locked = false;
+  }
+});
 
 // When a user clicks on the x it alerts and asks if they are sure, then removes the section
 const remove = function (i) {
@@ -49,7 +64,7 @@ const collapse = function (i) {
 const lock = function (i) {
   $("#l" + sections[i].name).on("click", function () {
     if (!sections[i].locked) {
-      $(".lock" + sections[i]).attr("src", "./imgs/lockIcon.png");
+      $(".lock" + sections[i].name).attr("src", "./imgs/lockIcon.png");
       $("#" + sections[i].name).addClass("locked");
       $("#" + sections[i].name + " :input").addClass("locked");
       $("#" + sections[i].name + " :input").prop("readonly", true);
@@ -134,20 +149,63 @@ new Sortable(sortablelist, {
 // let contact = $("");
 
 $("#renderBtn").on("click", function (event) {
-  event.preventDefault();
-  // create pdf
-  doc.text(
-    `Introduction
-    ${$("#introductionInput").val()}
-How to contact me
-  Email: ${$("#email").val()}
-  Phone Number: ${$("#number").val()}
-  Office Hours: ${$("#officehrs").val()}
-  Course Schedule: ${$("#scheduleInput").vla()}
-  Attendance Policy: ${$("#attendanceInput").vla()}
-  `,
-    10,
-    10
+  // pageHeight= pdf.internal.pageSize.height;
+
+  // Then, while adding text into pdf,
+
+  // pdf.text(x, y, "value");
+
+  // I am checking this condition everytime,
+
+  // if (y>=pageHeight)
+  // {
+  // pdf.addPage();
+  // }
+  let splitIntro1 = doc.splitTextToSize("Introduction", 240);
+  let splitIntro2 = doc.splitTextToSize(
+    `${$("#introductionInput").val()}`,
+    180
   );
+  let splitAtt1 = doc.splitTextToSize("Attendance Policy", 240);
+  let splitAtt2 = doc.splitTextToSize(`${$("#attendanceInput").val()}`, 240);
+  let splitSched1 = doc.splitTextToSize("Course Schedule", 240);
+  let splitSched2 = doc.splitTextToSize(`${$("#scheduleInput").val()}`, 240);
+  let splitTitle1 = doc.splitTextToSize("Title IX", 240);
+  let splitTitle2 = doc.splitTextToSize(`${$("#titleIXInput").val()}`, 240);
+  let splitCor1 = doc.splitTextToSize("Corona Virus", 240);
+  let splitCor2 = doc.splitTextToSize(`${$("#coronaInput").val()}`, 240);
+
+  event.preventDefault();
+  doc.setFontSize(18);
+  doc.text(splitIntro1, 20, 20);
+  doc.setFontSize(12);
+  doc.text(splitIntro2, 20, 30);
+  doc.setFontSize(18);
+  doc.text("How to contact me", 20, 40);
+  doc.setFontSize(12);
+  doc.text(
+    20,
+    50,
+    `Email: ${$("#email").val()}
+    Phone Number: ${$("#number").val()}
+    Office Hours: ${$("#officehrs").val()}`
+  );
+  doc.setFontSize(18);
+  doc.text(20, 80, splitAtt1);
+  doc.setFontSize(12);
+  doc.text(20, 90, splitAtt2);
+  doc.setFontSize(18);
+  doc.text(20, 130, splitSched1);
+  doc.setFontSize(12);
+  doc.text(20, 140, splitSched2);
+  doc.setFontSize(18);
+  doc.text(20, 200, splitTitle1);
+  doc.setFontSize(12);
+  doc.text(20, 210, splitTitle2);
+  doc.addPage();
+  doc.setFontSize(18);
+  doc.text(20, 20, splitCor1);
+  doc.setFontSize(12);
+  doc.text(20, 30, splitCor2);
   doc.save("syllabus");
 });
