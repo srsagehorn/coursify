@@ -34,20 +34,25 @@
       <div class="row" id="down">
         <div class="col-md-4">
           <p id="description">
-            Syligen is a comprehensive and user friendly syllabus generator
-            directed towards professors. University syllabus language is
-            automatically generated based on your university.
+            SyliGen is a comprehensive and user friendly syllabus generator
+            directed towards professors. Simply customize the form any way use
+            want, using and editing templated language. University syllabus
+            language is automatically generated based on thee university
+            selected.
           </p>
-          <div id="allignRight">
+          <!-- <form autocomplete="off"> -->
+          <div id="allignRight" class="autocomplete">
             <input
               id="school"
               type="text"
               placeholder="Enter you school name..."
+              autocomplete="off"
             />
             <a href="/form">
               <button type="submit" id="generator">Generator</button>
             </a>
           </div>
+          <!-- </form> -->
         </div>
         <div class="col-md-8">
           <div id="spacer"></div>
@@ -85,6 +90,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/form.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -144,9 +144,6 @@ new Sortable(sortablelist, {
 
 // // ------TEXT FROM FORM---------//
 // // Introduction
-// let introduction = $("#introductionInput").val();
-// //Contact
-// let contact = $("");
 
 $("#renderBtn").on("click", function (event) {
   // pageHeight= pdf.internal.pageSize.height;
