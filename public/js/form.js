@@ -24,17 +24,17 @@ const doc = new jsPDF({
 let collapsed = false;
 
 // If the university entered is not ASU then take off default text
-$("#generator").on("click", function () {
-  if (
-    !$("#school").val() == "Arizona State University" ||
-    "ASU" ||
-    "Arizona State" ||
-    ""
-  ) {
-    $("#coronaInput").text("");
-    sections.corona.locked = false;
-  }
-});
+// $("#generator").on("click", function () {
+//   if (
+//     !$("#school").val() == "Arizona State University" ||
+//     "ASU" ||
+//     "Arizona State" ||
+//     ""
+//   ) {
+//     $("#coronaInput").text("");
+//     sections.corona.locked = false;
+//   }
+// });
 
 // When a user clicks on the x it alerts and asks if they are sure, then removes the section
 const remove = function (i) {
