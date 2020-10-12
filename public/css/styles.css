@@ -79,7 +79,7 @@
 }
 
 #allignRight {
-  text-align: right;
+  margin-left: 100px;
 }
 
 #generator:hover {
